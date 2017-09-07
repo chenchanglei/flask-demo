@@ -1,15 +1,8 @@
-<html>
-  <head>
-    {%if title%}
-    <title>{{title}} - blog</title>
-    {%else%}
-    <title>nq - blog</title>
-    {%endif%}
-  </head>
-  <body>
-      <h1>Hello, {{user.name}}!</h1>
-      {%for i in post%}
-      <p>{{i.author.name}} say:<b>{{i.body}}</b></p>
-      {%endfor%}
-  </body>
-</html>
+{%extends "base.html"%}
+{%block content%}
+<h1>Hi,{{user.name}}</hi>
+{%for i in post%}
+
+<p>{{i.author.name}} say:<b>{{i.body}}</b></p>
+{%endfor%}
+{%endblock%}
